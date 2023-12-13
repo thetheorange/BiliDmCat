@@ -98,7 +98,7 @@ class App(QWidget):
     # 尝试查找配置文件，若没有则报错
     def __find_config(self):
         try:
-            if not os.path.exists(".//config.json"):
+            if not os.path.exists("config.json"):
                 self.__fix_config()
             else:
                 my_logger.info("配置文件config.json存在")
@@ -226,7 +226,7 @@ class App(QWidget):
                 with open(selected_file, "r") as f:
                     content = f.read()
                 # 将新的配置文件写入
-                with open(".//config.json", "w") as f:
+                with open("config.json", "w") as f:
                     f.write(content)
                 # 获取新的数据
                 config = read_config()
@@ -251,12 +251,12 @@ class App(QWidget):
     @staticmethod
     def __out_config():
         try:
-            if os.path.exists("./TempConfig"):
+            if os.path.exists(".\\TempConfig"):
                 # 读取config文件
-                with open(".//config.json", "r") as f:
+                with open("config.json", "r") as f:
                     content = f.read()
                 # 写入指定的文件夹中
-                with open(".//TempConfig//config.json", "w") as f:
+                with open(".\\TempConfig\\config.json", "w") as f:
                     f.write(content)
                 # 提示导出成功
                 success_message = QMessageBox()
@@ -265,14 +265,14 @@ class App(QWidget):
                 success_message.setWindowTitle("Success")
                 success_message.exec_()
             else:
-                os.mkdir("./TempConfig")
+                os.mkdir(".\\TempConfig")
         except Exception as e:
             my_logger.error(f"导出配置文件失败 {e}")
 
     # 修复/恢复默认配置
     def __fix_config(self):
         try:
-            with open("./config.json", "w") as f:
+            with open("config.json", "w") as f:
                 f.write(init_config)
             # 提示恢复成功
             success_message = QMessageBox()

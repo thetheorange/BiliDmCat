@@ -16,7 +16,7 @@ def create_logger():
     formatter = logging.Formatter('%(asctime)s | %(levelname)s -> %(message)s')
 
     # 创建handler，用于存放logger的位置
-    file_handler = logging.FileHandler("C:\\Users\\rust\\PycharmProjects\\blblCat\\Logger\\logFile.log")
+    file_handler = logging.FileHandler("Logger/logFile.log")
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.INFO)
 

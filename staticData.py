@@ -51,11 +51,11 @@ global_signal = Signals()
 # 读取配置文件
 def read_config():
     try:
-        if not os.path.exists(".//config.json"):
-            with open("./config.json", "w") as f:
+        if not os.path.exists("config.json"):
+            with open("config.json", "w") as f:
                 f.write(init_config)
         else:
-            with open("C:\\Users\\rust\\PycharmProjects\\blblCat\\config.json", "r") as f:
+            with open("config.json", "r") as f:
                 content = f.read()
                 content = json.loads(content)
                 return content
@@ -66,12 +66,12 @@ def read_config():
 # 修改配置文件函数
 def modify_config(key, value):
     try:
-        if not os.path.exists(".//config.json"):
-            with open("./config.json", "w") as f:
+        if not os.path.exists("config.json"):
+            with open("config.json", "w") as f:
                 f.write(init_config)
         else:
             # 读取旧数据
-            with open("C:\\Users\\rust\\PycharmProjects\\blblCat\\config.json", "r") as f:
+            with open("config.json", "r") as f:
                 content = json.load(f)
 
             if key in content:
@@ -80,7 +80,7 @@ def modify_config(key, value):
                 my_logger.info("not found key to update")
 
             # 写入新数据
-            with open("C:\\Users\\rust\\PycharmProjects\\blblCat\\config.json", "w") as f:
+            with open("config.json", "w") as f:
                 json.dump(content, f, indent=2)
     except Exception as e:
         my_logger.error(f"[MODIFY CONFIG] ERROR: {e}")
