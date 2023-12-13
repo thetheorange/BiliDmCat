@@ -48,10 +48,10 @@ class GetData(Thread):
 
 
 class App(QWidget):
-    def __init__(self):
+    def __init__(self, sys_arg):
         super().__init__()
         # 获取项目对象
-        self.__app = QApplication(sys.argv)
+        self.__app = QApplication(sys_arg)
         self.__app.setQuitOnLastWindowClosed(False)
         # 设置连接和断开转换标志
         self.__change_flag = True
@@ -341,6 +341,7 @@ class App(QWidget):
         try:
             self.set_w.close()
             self.show_w.close()
-            self.__app.exit()
+            self.__app.quit()
+            raise KeyboardInterrupt
         except Exception as e:
             my_logger.error(f"EXIT APP ERROR: {e}")
