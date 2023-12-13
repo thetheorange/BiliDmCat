@@ -17,7 +17,7 @@ from staticData import global_signal, icon_path
 class SettingWindow(QWidget):
     def __init__(self):
         super().__init__()
-        loadUi("ui/SettingWindow.ui", self)
+        loadUi("ui\\SettingWindow.ui", self)
         # 设置标题、图标
         self.setWindowTitle("BiliDmCat-Setting")
         self.setWindowIcon(QIcon(icon_path))

@@ -15,8 +15,8 @@ from Logger.Logger import my_logger
 
 # 默认配置
 init_config = {
-    "icon_path": "C:\\Users\\rust\\PycharmProjects\\blblCat\\ui\\television.ico",
-    "tray_icon_path": "C:\\Users\\rust\\PycharmProjects\\blblCat\\ui\\tray_icon.png",
+    "icon_path": "ui\\television.ico",
+    "tray_icon_path": "ui\\tray_icon.png",
     "opacity": 0.2,
     "font_size": 20,
     "ban_words": [],
