@@ -53,7 +53,7 @@ def generate_certificate(real_room_id, UID):
     # type 操作类型
     Type = 7
     # sequence字段 可忽略
-    Sequence = 1
+    Sequence = 2
     # 获取cookie中的buvid3参数
     if cookies_dict:
         buvid = cookies_dict.get("buvid3")
@@ -85,7 +85,7 @@ def generate_heartbeat():
     # type 操作类型
     Type = 2
     # sequence字段 可忽略
-    Sequence = 1
+    Sequence = 2
     # body 为字符串
     Body = "[Object object]".encode()
 
