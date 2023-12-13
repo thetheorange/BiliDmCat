@@ -36,7 +36,7 @@ class showMsgWindow(QWidget):
         self.__corner_edge = None
 
         # 设置窗口的初始大小，获取TextBrowser控件
-        loadUi("C:\\Users\\rust\\PycharmProjects\\blblCat\\ui\\ShowMsg.ui", self)
+        loadUi("ui/ShowMsg.ui", self)
         self.showMsg = self.findChild(QTextBrowser, "showMsg")
         self.resize(400, 500)
         # 获取屏幕的大小
