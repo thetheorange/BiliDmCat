@@ -26,7 +26,8 @@ init_config = {
             "Origin": "https://live.bilibili.com",
             "Accept": "application/json",
             "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "cookies": ""
         },
         "cookies": "",
         "wss_addr": "wss://broadcastlv.chat.bilibili.com/sub",
